@@ -9,6 +9,8 @@ import {
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StorefrontModule } from '@spartacus/storefront';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,10 @@ import { StorefrontModule } from '@spartacus/storefront';
           baseUrl: 'https://storefront.c39j2-walkersde1-d4-public.model-t.cc.commerce.ondemand.com',
           legacy: false,
         },
+      },
+      pwa: {
+        enabled: true,
+        addToHomeScreen: true,
       },
       context: {
         urlParameters: ['baseSite', 'language', 'currency'],
@@ -45,7 +51,8 @@ import { StorefrontModule } from '@spartacus/storefront';
       // features: {
       //   level: '1.2',
       // },
-    })
+    }),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
