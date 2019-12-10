@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { StorefrontModule } from '@spartacus/storefront';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { translations, translationChunksConfig } from '@spartacus/assets';
 
 @NgModule({
   declarations: [
@@ -30,8 +31,14 @@ import { environment } from '../environments/environment';
         enabled: true,
         addToHomeScreen: true,
       },
+      i18n: {
+        resources: translations,
+        chunks: translationChunksConfig,
+        fallbackLang: 'en'
+      },
       context: {
         urlParameters: ['baseSite', 'language', 'currency'],
+        // baseSite: ['electronics']
         baseSite: [
           'electronics-spa',
           'electronics',
