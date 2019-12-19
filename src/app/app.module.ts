@@ -5,17 +5,24 @@ import {
   B2cStorefrontModule,
   JsonLdBuilderModule,
   StorefrontComponent,
+  PageLayoutComponent, CmsPageGuard 
 } from '@spartacus/storefront';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StorefrontModule } from '@spartacus/storefront';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
-import { translations, translationChunksConfig } from '@spartacus/assets';
+import { environment } from '../environments/environment.prod';
 
+import { staticPage } from './main/staticPage/staticPage.component'
+import { NewTemplate } from './main/newTemplate/newTemplate.component'
+
+import { translations, translationChunksConfig } from '@spartacus/assets';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    staticPage,
+    NewTemplate
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'spartacus-app' }),

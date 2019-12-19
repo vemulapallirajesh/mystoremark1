@@ -1,2 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+$primary: orange;
+
 @import "~@spartacus/styles/index";
+
+cx-login a {
+    color: var(--cx-white);
+    font-weight: var(--cx-font-weight-bold);
+}
+
+cx-mini-cart a {
+    color: var(--cx-color-danger);
+}
+
+
