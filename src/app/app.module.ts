@@ -38,6 +38,11 @@ import { RouterModule } from '@angular/router';
         enabled: true,
         addToHomeScreen: true,
       },
+      // {
+      //   cName:
+      //   Catt:
+      //   Cclas:
+      // },
       i18n: {
         resources: translations,
         chunks: translationChunksConfig,

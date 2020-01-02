@@ -26,7 +26,7 @@
     "@angular/http": "~7.2.11",
     "@angular/platform-browser": "~8.2.11",
     "@angular/platform-browser-dynamic": "~8.2.11",
-    "@angular/pwa": "^0.803.19",
+    "@angular/pwa": "^0.8.7",
     "@angular/router": "~8.2.11",
     "@angular/service-worker": "~8.2.5",
     "@ng-bootstrap/ng-bootstrap": "^3.2.2",

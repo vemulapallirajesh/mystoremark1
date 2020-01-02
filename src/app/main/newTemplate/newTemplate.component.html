@@ -5,3 +5,47 @@
         </button>
     </div>  
 </ng-template>
+
+<ng-template cxOutletRef="ProductImagesComponent" cxOutletPos="after" let-model>
+  "ProductImagesComponent" position
+  <pre>{{ model | json }}</pre>
+</ng-template>
+
+<!-- <ng-template cxOutletRef="pdpOutlets.INTRO" let-product>
+
+  "test"
+  <pre>{{ product | json }}</pre>
+</ng-template> -->
+
+<!-- 
+<ng-template [cxOutletRef]="pdpOutlets.INTRO" let-product>
+  test
+  <pre>{{ product | json }}</pre>
+</ng-template>
+
+<ng-template cxOutletRef="ProductImagesComponent" cxOutletPos="after" let-model>
+  "ProductImagesComponent" position
+  <pre>{{ model | json }}</pre>
+</ng-template>
+
+<ng-template cxOutletRef="ProductCarouselComponent" let-model>
+  "ProductImagesComponent" position
+  <pre>{{ model | json }}</pre>
+</ng-template> -->
+
+
+
+
+<!-- <ng-template cxOutletRef="ProductImagesComponent" let-model>
+  <p>
+    Replace slot 1, slots: {{ (model.slots$ | async).length }}, template:
+    {{ model.templateName$ | async }}, sections:
+    {{ model.sections$ | async | json }}
+  </p>
+</ng-template> -->
+
+<!-- <ng-template cxOutletRef="pdpOutlets.IMAGES" let-product>
+    <div>
+      <img *ngFor="let image of product.images.GALLERY" [src]="image.product.url" />
+    </div>
+  </ng-template> -->
